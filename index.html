@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8" />
+ 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>Formulario Final Fantasy</title>
+</head>
+<body>
+
+	<!----Scripts--->
+		<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+		<script src="js/code.js"></script>
+
+	<!---Audio--->
+		<audio src="https://www.dropbox.com/s/9x1mavi1pes6f28/Barret%27s%20Theme.mp3?raw=1" loop></audio>
+		<button id="button-volumen" class="musica-fondo">
+	  	<i class="fa fa-volume-up"></i>
+		</button>
+
+	<!---Main--->
+	<!-- Formulario -->
+	<form id="survey-form">
+		<div class="contenedor-main">
+		  <label id="name-label" for="name">Nombre<br></label>
+	      <input
+	        type="text"
+	        name="name"
+	        id="name"
+	        class="form-control"
+	        placeholder="Introduce tu nombre"
+	        required
+	      />
+	      <br>
+	      <label id="email-label" for="email">Email<br></label>
+	      <input
+	        type="email"
+	        name="email"
+	        id="email"
+	        class="form-control"
+	        placeholder="Introduce tu email"
+	        required
+	      />
+	      <br>
+	      <label id="number-label" for="number">Edad<span class="extra">(opcional)</span></label>
+	      <input
+	        type="number"
+	        name="age"
+	        id="number"
+	        min="10"
+	        max="99"
+	        class="form-control"
+	        placeholder="Introduce tu edad"
+	      />
+	      <p id="level-label">¿Qué nivel de conocimientos sobre FFVII consideras que tienes?</p>
+	      <select id="dropdown" name="role" class="form-control" required>
+	        <option disabled selected value>Selecciona una opción (de menor a mayor)</option>
+	        <option value="noob">Noob</option>
+	        <option value="aprendiz">Aprendiz</option>
+	        <option value="maestro">Maestro</option>
+	        <option value="soldado">Soldado de Primera Clase</option>
+	      </select>
+	  	</div>
+	  	<!-- Pregunta 1 -->
+	  	<div class="quiz fuera" id="p-1">
+			<p id="question-label">1. ¿Qué materia lleva equipada Cloud al principio del juego?</p>
+      <label>
+        <input
+          name="question-1"
+          value="1-a"
+          type="radio"
+          />Fuego</label>
+          <br>
+      <label>
+        <input
+          name="question-1"
+          value="1-b"
+          type="radio"
+        />Relámpago</label>
+        <br>
+      <label
+        ><input
+          name="question-1"
+          value="1-c"
+          type="radio"
+          class="input-radio"
+        />Recuperar</label>
+        <br>
+         <label
+        ><input
+          name="question-1"
+          value="1-d"
+          type="radio"
+        />Tierra</label>
+		</div>
+		<!-- Pregunta 2 -->
+		<div class="quiz fuera" id="p-2">
+			<p id="question-label">2. ¿Cuál es la profesión de Aeris en Midgar?</p>
+      <label>
+        <input
+          name="question-2"
+          value="2-a"
+          type="radio"
+          />Sacerdotisa</label>
+          <br>
+      <label>
+        <input
+          name="question-2"
+          value="2-b"
+          type="radio"
+        />Enfermera</label>
+        <br>
+      <label
+        ><input
+          name="question-2"
+          value="2-c"
+          type="radio"
+        />Florista</label>
+        <br>
+         <label
+        ><input
+          name="question-2"
+          value="2-d"
+          type="radio"
+        />Borracha</label>
+		</div>
+		<!-- Pregunta 3 -->
+		<div class="quiz fuera" id="p-3">
+			<p id="question-label">3. ¿Qué colores de materia existen?<span class="extra">(Selecciona los que existan)</span></p>
+      <label>
+        <input
+          name="question-3"
+          value="3-a"
+          type="checkbox"
+          />Amarilla</label>
+          <br>
+      <label>
+        <input
+          name="question-3"
+          value="3-b"
+          type="checkbox"
+        />Morada</label>
+        <br>
+      <label
+        ><input
+          name="question-3"
+          value="3-c"
+          type="checkbox"
+        />Naranja</label>
+        <br>
+         <label
+        ><input
+          name="question-3"
+          value="3-d"
+          type="checkbox"
+        />Blanca</label>
+		</div>
+		<!-- Pregunta 4 -->
+		<div class="quiz fuera" id="p-4">
+			<p id="question-label">4. ¿Cuáles de las siguientes armas son de Aeris?<span class="extra"><br>          (Selecciona las que existan)</span></p>
+      <label>
+        <input
+          name="question-4"
+          value="4-a"
+          type="checkbox"
+          />Porra</label>
+          <br>
+      <label>
+        <input
+          name="question-4"
+          value="4-b"
+          type="checkbox"
+        />Paraguas</label>
+        <br>
+      <label
+        ><input
+          name="question-4"
+          value="4-c"
+          type="checkbox"
+        />Cuento</label>
+        <br>
+         <label
+        ><input
+          name="question-4"
+          value="4-d"
+          type="checkbox"
+        />Cetro</label>
+		</div>
+		<!-- Pregunta 5 -->
+		<div class="quiz fuera" id="p-5">
+			<p id="question-label">5. ¿A quién podemos encontrar antes en el juego?</p>
+      <label>
+        <input
+          name="question-5"
+          value="5-a"
+          type="radio"
+          />Red XIII</label>
+          <br>
+      <label>
+        <input
+          name="question-5"
+          value="5-b"
+          type="radio"
+        />Vincent</label>
+        <br>
+      <label
+        ><input
+          name="question-5"
+          value="5-c"
+          type="radio"
+        />Cait Sith</label>
+        <br>
+         <label
+        ><input
+          name="question-5"
+          value="5-d"
+          type="radio"
+        />Yuffie</label>
+		</div>
+		<!-- Pregunta 6 -->
+		<div class="quiz fuera" id="p-6">
+			<p id="question-label">6. ¿A qué zona del juego pertenece la canción de esta página?<span class="extra"><br> (En la esquina superior derecha está el reproductor)</span></p>
+      <label>
+        <input
+          name="question-6"
+          value="6-a"
+          type="radio"
+          />Septimo Cielo</label>
+          <br>
+      <label>
+        <input
+          name="question-6"
+          value="6-b"
+          type="radio"
+        />Suburbios del Sector 7</label>
+        <br>
+      <label
+        ><input
+          name="question-6"
+          value="6-c"
+          type="radio"
+        />Sector 5</label>
+        <br>
+         <label
+        ><input
+          name="question-6"
+          value="6-d"
+          type="radio"
+        />Casa de Aeris</label>
+		</div>
+		<!-- Pregunta 7 -->
+		<div class="quiz fuera" id="p-7">
+			<p id="question-label">7. ¿Cuántos pisos tiene el edificio Shinra?</p>
+      <label>
+        <input
+          name="question-7"
+          value="7-a"
+          type="radio"
+          />70</label>
+          <br>
+      <label>
+        <input
+          name="question-7"
+          value="7-b"
+          type="radio"
+        />80</label>
+        <br>
+      <label
+        ><input
+          name="question-7"
+          value="7-c"
+          type="radio"
+        />90</label>
+        <br>
+         <label
+        ><input
+          name="question-7"
+          value="7-d"
+          type="radio"
+        />100</label>
+		</div>
+		<!-- Textarea -->
+		<div class="quiz fuera" id="textarea">
+			<p id="question-label">Esa era la última pregunta. ¡Gracias por tu visita!</p>
+			<p id="description"><b>Nota informativa</b>:<br>Este proyecto es una demostración que cumple los objetivos requeridos para el test de FreecodeCamp, tales como la validación de formularios con HTML5. <br><br> Justo aquí abajo tienes un panel para comentar que te ha parecido.<br> En la siguiente página encontrarás los baremos de nivel.</p>
+			<textarea
+	        class="input-textarea"
+	        name="comentario"
+	        placeholder="Introduce tu comentario aquí..."
+	     	></textarea>
+		</div>
+		<!-- Botón para enviar -->
+		<div class="quiz fuera" id="envio">
+			<p id="question-label">Baremos de nivel</p>
+			<p id="description">- 1-2 preguntas acertadas: <b>Noob</b><br>- 3-4 preguntas acertadas: <b>Aprendiz</b><br>- 5-6 preguntas acertadas: <b>Maestro</b><br>- 7 preguntas acertadas: <b>Soldado de Primera Clase</b><br><br>
+			En la siguiente página encontrarás las soluciones.<br>
+			<button type="submit" id="submit" class="submit-button">
+		    Enviar
+		    </button>
+		</div>
+	</form>
+	<!-- Fin del formulario -->
+
+		<!-- Soluciones -->
+		<div class="quiz fuera" id="end">
+			<p id="question-label"><b>Soluciones</b></p>
+			<p id="description"><b>Pregunta 1: </b>Relámpago<br><b>Pregunta 2: </b>Florista<b><br>Pregunta 3: </b>Amarilla, Morada y Blanca<br><b>Pregunta 4: </b>Porra, Paraguas y Cuento<br><b>Pregunta 5: </b>Cait Sith<br><b>Pregunta 6: </b>Suburbios del Sector 7<br><b>Pregunta 7: </b>70
+		</div>
+
+		<!-- Primer div -->
+		<div class="quiz-start" id="start">
+			<h1 id="title">¿Cuánto sabes de Final Fantasy VII?</h1>
+			<p id="description"><b>REGLAS:</b><br>- No vale buscar en google<br>- No vale usar bibliografía<br>- Las preguntas deben ser respondidas por ti mismo/a sin ayuda de nadie<br>- Contiene spoilers</p>
+		</div>
+
+
+		<!-- Botones para interactuar con las páginas -->
+			<button id="button-pag-izq" class="pagina-atras desactivado">
+	  		<i class="fa fa-arrow-left"></i>
+			</button>
+
+			<button id="button-pag-der" class="pagina-siguiente">
+	  		<i class="fa fa-arrow-right"></i>
+			</button>
+
+		<!-- Footer -->
+			<footer>
+				<i class="fa fa-copyright"> Francisco Fernández Martín</i>
+			</footer>
+</body>
+</html>
